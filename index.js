@@ -30,6 +30,9 @@ app.use(bodyParser.urlencoded({ limit: "30mb",extended: true}));
 app.use(cors(corsOptions));
 app.use('/posts' , postRoutes);
 app.use('/user' , userRoutes);
+app.get('/', (req, res) =>{
+    res.send("APP IS RUNNING");
+});
 
 
 
