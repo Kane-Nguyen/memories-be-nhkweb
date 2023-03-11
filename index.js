@@ -11,12 +11,13 @@ const corsOptions ={
     credentials:true,   
     optionSuccessStatus:200
 }
+const db = `mongodb+srv://kaneblog123:Kha123abcd@cluster0.70y58df.mongodb.net/memories_blog`;
 const PORT = process.env.PORT || 5000;
 const app = express();
 
 dotenv.config();
 mongoose.set("strictQuery", false);
-mongoose.connect("mongodb://localhost:27017/memory_web_dev", {
+mongoose.connect(db , {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
