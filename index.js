@@ -16,7 +16,7 @@ const app = express();
 
 dotenv.config();
 mongoose.set("strictQuery", false);
-mongoose.connect("mongodb://localhost:27017/memory_web_dev", {
+mongoose.connect("mongodb:///memories-be-nhkblog.onrender.com/memory_web_dev", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
