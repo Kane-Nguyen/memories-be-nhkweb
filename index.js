@@ -15,7 +15,7 @@ dotenv.config();
 console.log(process.env.PASSWORD);
 console.log(process.env.MONGODB_USERNAME);
 
-const db = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.PASSWORD}@cluster0.70y58df.mongodb.net/memories_blog`;
+const db = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.70y58df.mongodb.net/memories_blog`;
 console.log(db);
 const PORT = process.env.PORT || 5000;
 const app = express();
