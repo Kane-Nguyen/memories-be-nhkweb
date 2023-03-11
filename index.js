@@ -6,6 +6,8 @@ import dotenv from 'dotenv';
 import postRoutes from './routes/posts.js'
 import userRoutes from './routes/users.js'
 
+
+dotenv.config();
 const corsOptions ={
     origin:'https://memories-be-nhkblog.onrender.com', 
     credentials:true,   
@@ -14,9 +16,9 @@ const corsOptions ={
 const PORT = process.env.PORT || 5000;
 const app = express();
 
-dotenv.config();
+
 mongoose.set("strictQuery", false);
-mongoose.connect("mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0.70y58df.mongodb.net/memories_blog", {
+mongoose.connect("mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.70y58df.mongodb.net/memories_blog", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
