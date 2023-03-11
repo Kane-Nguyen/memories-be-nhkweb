@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
 import postRoutes from './routes/posts.js'
 import userRoutes from './routes/users.js'
 
@@ -11,11 +11,15 @@ const corsOptions ={
     credentials:true,   
     optionSuccessStatus:200
 }
-const db = `mongodb+srv://kaneblog123:Kha123abcd@cluster0.70y58df.mongodb.net/memories_blog`;
+dotenv.config();
+console.log(process.env.PASSWORD);
+console.log(process.env.MONGODB_USERNAME);
+
+const db = `mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.PASSWORD}@cluster0.70y58df.mongodb.net/memories_blog`;
+console.log(db);
 const PORT = process.env.PORT || 5000;
 const app = express();
 
-dotenv.config();
 mongoose.set("strictQuery", false);
 mongoose.connect(db , {
     useNewUrlParser: true,
