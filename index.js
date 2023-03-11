@@ -16,7 +16,7 @@ const app = express();
 
 dotenv.config();
 mongoose.set("strictQuery", false);
-mongoose.connect("mongodb+srv://kaneblog123:Kha123abcd@cluster0.70y58df.mongodb.net/memories_blog", {
+mongoose.connect("mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@cluster0.70y58df.mongodb.net/memories_blog", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
