@@ -9,7 +9,7 @@ import userRoutes from './routes/users.js'
 
 dotenv.config();
 const corsOptions ={
-    origin:'*', 
+    origin:'http://memoriesblog.click', 
     credentials:true,   
     optionSuccessStatus:200
 }
