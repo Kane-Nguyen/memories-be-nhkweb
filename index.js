@@ -7,7 +7,7 @@ import postRoutes from './routes/posts.js'
 import userRoutes from './routes/users.js'
 
 const corsOptions ={
-    origin:'http://memoriesblog.click/', 
+    origin:'http://memoriesblog.click', 
     credentials:true,   
     optionSuccessStatus:200
 }
