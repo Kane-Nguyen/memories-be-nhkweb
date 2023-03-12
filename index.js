@@ -9,7 +9,7 @@ import userRoutes from './routes/users.js'
 
 dotenv.config();
 const corsOptions ={
-    origin:'https://memories-be-nhkblog.onrender.com', 
+    origin:'https://memories-nhk-be.onrender.com', 
     credentials:true,   
     optionSuccessStatus:200
 }
